@@ -1,35 +1,46 @@
 # test
 This is a repository for testing purposes.
 
-# Hello Python Project
+# Kanban Board Web App
 
-## Create a Python 3.10 Virtual Environment
+This project is a simple Kanban board web application, consisting of:
 
-1. Install virtualenv (if not already installed):
-   ```bash
-   pip install virtualenv
-   ```
-2. Create a Python 3.10 virtual environment (assuming python3.10 is installed on your system):
-   ```bash
-   virtualenv venv --python=python3.10
-   ```
-3. Activate the virtual environment:
-   - macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-   - Windows:
-     ```cmd
-     .\venv\Scripts\activate
-     ```
-4. Install dependencies (if any):
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **Backend:** Python FastAPI
+- **Database:** MongoDB
+- **Frontend:** ReactJS
 
-## Run hello.py
+## Project Structure
+- `backend/` : FastAPI backend server
+- `frontend/` : ReactJS web app
 
-After activating the virtual environment, run:
+## Prerequisites
+- Python 3.10+
+- Node.js (v16+ recommended)
+- MongoDB (local or cloud instance)
+
+## How to Run
+
+### 1. Start MongoDB
+Make sure you have a running MongoDB instance. You can use a local MongoDB or a cloud service like MongoDB Atlas.
+
+### 2. Start Backend (FastAPI)
 ```bash
-python hello.py
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
+The backend will be available at `http://localhost:8000`.
+
+### 3. Start Frontend (ReactJS)
+```bash
+cd frontend
+npm install
+npm start
+```
+The frontend will be available at `http://localhost:3000`.
+
+---
+
+You can now access the Kanban board web app via your browser at `http://localhost:3000`.
